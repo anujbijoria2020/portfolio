@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
+import { Theme } from "@radix-ui/themes";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
+import ConditionalFooter from "./ConditionalFooter";
+import DarkModeProvider from "@/context/DarkModeContext";
+import {Toaster} from 'sonner'
+import Provider from "@/context/SessionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,11 +31,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Provider>
+      <DarkModeProvider>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-none bg-white dark:bg-black`}
+        >
+          <Toaster position="bottom-right"/>
+          <Theme className="dark:!bg-black">
+            <SmoothCursor/>
+        <NavBar/>
         {children}
+        <ConditionalFooter/>
+          </Theme>
       </body>
+      </DarkModeProvider>
+      </Provider>
     </html>
   );
 }
