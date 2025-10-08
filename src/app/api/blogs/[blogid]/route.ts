@@ -3,9 +3,9 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
   req: NextRequest,
-  context: { params: { blogid: string } } 
+  context: { params: any} 
 ) {
-  const { blogid } = context.params;
+  const { blogid } = await context.params;
 
   try {
     const blog = await prisma.blog.findUnique({
