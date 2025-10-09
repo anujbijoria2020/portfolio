@@ -32,7 +32,6 @@ const Page = () => {
         <Education />
       </div>
       <Element name="contact-section" className="w-full" >
-
             <div className="w-full flex justify-center mt-12">
         < Contact />
       </div>
