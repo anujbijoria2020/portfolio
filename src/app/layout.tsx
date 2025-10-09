@@ -8,6 +8,7 @@ import ConditionalFooter from "./ConditionalFooter";
 import DarkModeProvider from "@/context/DarkModeContext";
 import {Toaster} from 'sonner'
 import Provider from "@/context/SessionProvider";
+import DesktopCursorWrapper from "@/components/DesktopCursorWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,7 +48,7 @@ export default function RootLayout({
         >
           <Toaster position="bottom-right"/>
           <Theme className="dark:!bg-black">
-            <SmoothCursor/>
+            <DesktopCursorWrapper/>
         <NavBar/>
         {children}
         <ConditionalFooter/>
