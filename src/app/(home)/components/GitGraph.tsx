@@ -28,4 +28,5 @@ return (
 )
 }
 
+
 export default memo(GitGraph)
