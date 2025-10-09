@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Blog } from '@/types/project'
 import BlogCard from '../[blogid]/components/BlogCard'
 
