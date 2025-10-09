@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic';
 
 import InitialLanding from './components/InitialLanding';
+import { Element } from 'react-scroll';
 const ProjectCardList = dynamic(()=>import('@/app/Projects/components/ProjectCardList'),{ssr:false})
 const HomeRouteBlogs = dynamic(()=>import('@/components/HomeRouteBlogs'),{ssr:false})
 const GitGraph = dynamic(()=>import('./components/GitGraph'),{ssr:false})
@@ -30,9 +31,12 @@ const Page = () => {
             <div className="w-full flex justify-center mt-12">
         <Education />
       </div>
+      <Element name="contact-section" className="w-full" >
+
             <div className="w-full flex justify-center mt-12">
         < Contact />
       </div>
+      </Element>
       </div>
   );
 };
