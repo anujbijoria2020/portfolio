@@ -10,7 +10,7 @@ cloudinary.config({
 })
 
 
-console.log("cloudinary config:",cloudinary.config());
+// console.log("cloudinary config:",cloudinary.config());
 
 interface CloudinaryUploadResult {
     public_id: string;

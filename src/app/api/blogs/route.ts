@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
@@ -13,7 +15,6 @@ const blogs = await prisma.blog.findMany({
         content:true,
         createdAt:true,
     }
-
 })
 return NextResponse.json(
     {success:true,message:blogs},
