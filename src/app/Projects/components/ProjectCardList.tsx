@@ -53,7 +53,7 @@ const data:Project[] = [
     logo:"/RepoMind.png",
     title:"RepoMind-Ai github SaaS platform",
     description:"RepoMind is an AI tool that summarizes your GitHub repos, tracks commits, answers code questions, and generates meeting issues for your projects",
-    link:"https://repo-mind-nine.vercel.app",
+    link:"https://repomind.anujpatel.tech",
     source:"https://github.com/anujbijoria2020/RepoMind",
     techStack:['Nextjs',"shadcn",'trpc','tailwindcss','prisma','octokit','Gemini AI','vector embeddings','razorpay'],
 },
@@ -61,7 +61,7 @@ const data:Project[] = [
   logo:"/brain.png",
   title:"IdeaNode",
   description:"Turn scattered thoughts into structured ideas — your second brain in the cloud.",
-  link:"https://idea-node.vercel.app",
+  link:"https://ideanode.anujpatel.tech",
   source:"https://github.com/anujbijoria2020/IdeaNode",
   techStack:["Reactjs","Nodejs","Expressjs","Typescript","Mongodb","JWT-auth"]
 },{
@@ -69,7 +69,7 @@ const data:Project[] = [
   title:"NextStep AI",
   description:"NextStep AI is an AI-powered roadmap builder and productivity assistant.It allows users to generate personalized learning or career roadmaps using AI, view their recently generated roadmaps in a beautiful card-based UI, and sign in securely with Google OAuth",
   techStack:["Reactjs","tailwindcss","Oauth","JWT","Nodejs","Expressjs","Passportjs","Nodemailer","Mongodb","deepseek Ai"],
-  link:"https://next-step-ai-chi.vercel.app/",
+  link:"https://nextstepai.anujpatel.tech",
   source:"https://github.com/anujbijoria2020/NextStep_AI",
 }
 ]
