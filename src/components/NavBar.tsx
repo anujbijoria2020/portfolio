@@ -15,6 +15,7 @@ import {
   LinkedinIcon,
   NotebookIcon,
   Rows3Icon,
+  TwitterIcon,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -94,11 +95,25 @@ const NavBar = () => {
               </TooltipContent>
             </Tooltip>
           </Link>
-          <Link href="https://x.com/AnujKurmi78252" target="_blank">
+          <Link href="https://github.com/anujbijoria2020" target="_blank">
             <Tooltip>
               <TooltipTrigger>
                 <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
                   <GithubIcon
+                    className={`w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white `}
+                  />
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <span>Github</span>
+              </TooltipContent>
+            </Tooltip>
+          </Link>
+          <Link href="https://x.com/AnujKurmi78252" target="_blank">
+            <Tooltip>
+              <TooltipTrigger>
+                <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
+                  <TwitterIcon
                     className={`w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white `}
                   />
                 </div>
@@ -155,3 +170,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
+
