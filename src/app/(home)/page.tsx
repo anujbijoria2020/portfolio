@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 
 import InitialLanding from './components/InitialLanding';
 import { Element } from 'react-scroll';
+import { redirect } from 'next/navigation';
 const LeetCodeCard = dynamic(()=> import('@/app/(home)/components/LeetCodeCard'),{ssr:false})
 const ProjectCardList = dynamic(()=>import('@/app/Projects/components/ProjectCardList'),{ssr:false})
 const HomeRouteBlogs = dynamic(()=>import('@/components/HomeRouteBlogs'),{ssr:false})
@@ -26,7 +27,8 @@ const Page = () => {
         <div className="w-full  flex justify-center mt-8 items-center">
         <LeetCodeCard />
       </div>
-        <div className="w-full  flex justify-center mt-8 items-center">
+        <div className="w-full  flex justify-center mt-8 items-center"        
+       >
         <GitGraph />
       </div>
         <div className="w-full flex justify-center mt-12">

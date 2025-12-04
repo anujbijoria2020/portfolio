@@ -1,4 +1,6 @@
 import Title from "@/components/ui/Title";
+import { Link } from "@radix-ui/themes";
+import { redirect } from "next/navigation";
 
 // in your component, e.g. components/LeetCodeCard.jsx
 export default function LeetCodeCard() {
@@ -8,7 +10,10 @@ export default function LeetCodeCard() {
       <img
         src={`https://leetcard.jacoblin.cool/contactanujkurmi?theme=dark&font=sans-serif&ext=heatmap&border_radius=10&hide_border=true`}
         alt="LeetCode Stats"
-        className="rounded-xl shadow-lg"
+        className="rounded-xl shadow-lg
+        
+        "
+        onClick={()=>{redirect("https://leetcode.com/contactanujkurmi")}}
       />
     </div>
   );
