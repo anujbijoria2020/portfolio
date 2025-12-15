@@ -33,7 +33,7 @@
     "icons": "^1.0.0",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.22",
-    "next": "15.5.4",
+    "next": "15.5.9",
     "next-auth": "^4.24.11",
     "next-cloudinary": "^6.16.0",
     "prismjs": "^1.30.0",
