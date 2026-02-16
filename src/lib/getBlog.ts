@@ -1,7 +1,5 @@
-import { PrismaClient } from '@/generated/prisma';
 import { notFound } from 'next/navigation';
-
-const prisma= new PrismaClient();
+import { prisma } from "./prisma";
 
 export async function getBlog(blogId:string){
     console.log("Fetching blog with ID:",blogId);

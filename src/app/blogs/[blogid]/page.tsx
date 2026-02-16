@@ -8,14 +8,25 @@ import { Metadata } from "next";
 import unescapeHTML from "@/utils/unescapeHTML";
 
 type PageProps = {
-    params:{
-        blogid:string
-    }
+    params:Promise<{blogid:string}>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const blog = await getBlog(params.blogid)
+     
+    const {blogid} = await params;
 
+    const blog = await getBlog(blogid)
+  if(!blog){
+    return {
+        title:"Blog Not Found",
+        description:"The blog you are looking for does not exist.",
+        openGraph:{
+            title:"Blog Not Found",
+            description:"The blog you are looking for does not exist.",
+            type:"article"
+        }
+  }
+}
     return {
         title: blog.title,
         description: blog.content.slice(0, 160),
@@ -29,13 +40,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 const BlogDetailPage = async ({params}:PageProps) => {
-    console.log("Blog data:",params.blogid);
-    const blog = await getBlog(params.blogid);
-    const readingTime= calculateReadingTime(blog.content);
+    const { blogid } = await params;
 
-    const unescapedContent = unescapeHTML(blog.content);
-    const formattedContent = unescapedContent.replace(/\n/g, "<br />");
-    blog.content = formattedContent;
+  console.log("Blog ID:", blogid);
+
+  if (!blogid) {
+    throw new Error("Blog ID missing");
+  }
+
+  const blog = await getBlog(blogid);
+
+  const readingTime = calculateReadingTime(blog.content);
+
+  const unescapedContent = unescapeHTML(blog.content);
+  const formattedContent = unescapedContent.replace(/\n/g, "<br />");
+
+  blog.content = formattedContent;
 
   return (
     <article className="w-full mt-40 max-sm:overflow-hidden max-sm:mt-28 max-[1025px]:px-4 max-[1285px]:px-4 max-lg:px-0 max-sm:px-0 flex flex-col gap-10 items-center pb-8">
@@ -72,4 +92,5 @@ export async function generateStaticParams() {
     return blogs.map((blog) => ({
         blogid: blog.id
     }))
+
 }

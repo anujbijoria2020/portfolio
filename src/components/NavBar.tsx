@@ -119,7 +119,7 @@ const NavBar = () => {
                 </div>
               </TooltipTrigger>
               <TooltipContent>
-                <span>Github</span>
+                <span>Twitter</span>
               </TooltipContent>
             </Tooltip>
           </Link>
