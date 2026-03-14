@@ -50,6 +50,14 @@ export default ProjectCardList;
 
 const data:Project[] = [
 {
+  logo:"/ScorePulse.svg",
+  title:"ScorePulse",
+  description:"ScorePulse is a real-time sports score tracking app built with React and Pure Web sockets It provides live updates for various sports, allowing users to stay informed about their favorite teams and games without needing to refresh the page.",
+  techStack:["Reactjs","Tailwindcss","Websockets","Nodejs","Expressjs","postgresql","drizzle-orm"],
+  link:"https://scorepulse.anujpatel.tech",
+  source:"https://github.com/anujbijoria2020/ScorePulseFrontend"
+},
+{
     logo:"/RepoMind.png",
     title:"RepoMind-Ai github SaaS platform",
     description:"RepoMind is an AI tool that summarizes your GitHub repos, tracks commits, answers code questions, and generates meeting issues for your projects",
@@ -58,14 +66,14 @@ const data:Project[] = [
     techStack:['Nextjs',"shadcn",'trpc','tailwindcss','prisma','octokit','Gemini AI','vector embeddings','razorpay'],
 },
 {
-  logo:"/brain.png",
+  logo:"/ideanode.jpg",
   title:"IdeaNode",
   description:"Turn scattered thoughts into structured ideas — your second brain in the cloud.",
   link:"https://ideanode.anujpatel.tech",
   source:"https://github.com/anujbijoria2020/IdeaNode",
   techStack:["Reactjs","Nodejs","Expressjs","Typescript","Mongodb","JWT-auth"]
 },{
-  logo:"/nextstep.png",
+  logo:"/nextstepai.jpg",
   title:"NextStep AI",
   description:"NextStep AI is an AI-powered roadmap builder and productivity assistant.It allows users to generate personalized learning or career roadmaps using AI, view their recently generated roadmaps in a beautiful card-based UI, and sign in securely with Google OAuth",
   techStack:["Reactjs","tailwindcss","Oauth","JWT","Nodejs","Expressjs","Passportjs","Nodemailer","Mongodb","deepseek Ai"],
