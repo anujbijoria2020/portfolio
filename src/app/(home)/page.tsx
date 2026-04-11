@@ -6,6 +6,7 @@ import { Element } from 'react-scroll';
 import { redirect } from 'next/navigation';
 const LeetCodeCard = dynamic(()=> import('@/app/(home)/components/LeetCodeCard'),{ssr:false})
 const ProjectCardList = dynamic(()=>import('@/app/Projects/components/ProjectCardList'),{ssr:false})
+const ExperienceCardList = dynamic(() => import('@/app/experience/components/ExperienceCardList'), { ssr: false })
 const HomeRouteBlogs = dynamic(()=>import('@/components/HomeRouteBlogs'),{ssr:false})
 const GitGraph = dynamic(()=>import('./components/GitGraph'),{ssr:false})
 const Skills = dynamic(()=>import('@/components/Skills'),{ssr:false})
@@ -16,10 +17,13 @@ const Page = () => {
   return (
     <div className="max-[350px]:overflow-hidden mt-8 max-sm:mt-0">
       <InitialLanding />
-
         <div className="w-full flex justify-center mt-45">
         <ProjectCardList/>
       </div>
+        <div className="w-full flex justify-center mt-45">
+        <ExperienceCardList />
+      </div>
+
         <div className="w-full flex justify-center mt-8">
         <HomeRouteBlogs />
       </div>
