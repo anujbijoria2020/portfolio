@@ -10,12 +10,14 @@ type PublicId = {
 const BlogPage = ({ public_id }: PublicId) => {
     return (
         <CldImage
-            width="900"
+            width="1600"
             height="900"
             src={public_id}
             sizes="100vw"
             alt="Blog Image"
-            radius="10"
+            crop="fill"
+            gravity="auto"
+            className="h-auto w-full rounded-2xl border border-black/10 object-cover shadow-md dark:border-white/15"
         />
     )
 }
