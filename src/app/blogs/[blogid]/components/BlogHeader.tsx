@@ -11,17 +11,19 @@ import React from 'react'
 const BlogHeader = ({author,createdAt,readingTime}:BlogHeaderProps) => {
 
    return (
-        <div className="mt-4 flex flex-wrap items-center gap-2">
+        <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-black/65 dark:text-white/70 max-sm:text-xs">
 
             <Link
                 href='https://github.com/anujbijoria2020'
                 underline='none'
-                className='text-sm text-black dark:text-white'
+                className='font-medium text-black transition-colors hover:text-black/70 dark:text-white dark:hover:text-white/80'
             >
                 {author}
             </Link>
-            <p className='text-sm max-sm:text-xs'>{formatDate(createdAt)}</p>
-            <p className='text-sm max-sm:text-xs'>{readingTime}</p>
+            <span className='text-black/35 dark:text-white/35'>•</span>
+            <p>{formatDate(createdAt)}</p>
+            <span className='text-black/35 dark:text-white/35'>•</span>
+            <p>{readingTime}</p>
         </div>
     )
 }

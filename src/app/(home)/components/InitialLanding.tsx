@@ -25,8 +25,7 @@ export default function InitialLanding() {
             <h1
               className={`mt-2 max-sm:mt-5 max-sm:px-3 !text-base max-sm:!text-sm text-center !font-normal !tracking-normal inter !leading-6 ${inter}`}
             >
-              19,full-stack web developer with a passion for building impactful projects. I love breaking things to understand how they work, learning fast, and diving deep into backend systems, artificial intelligence, and core computer science concepts.
-
+              20,Software developer with a passion for building impactful projects. I love breaking things to understand how they work, learning fast, and diving deep into backend systems, and core computer science concepts.
               <br />
               If you’re working on something real, let’s talk.
             </h1>
