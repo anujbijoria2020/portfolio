@@ -58,12 +58,12 @@ const data:Project[] = [
   source:"https://github.com/anujbijoria2020/ScorePulseFrontend"
 },
 {
-    logo:"/RepoMind.png",
-    title:"RepoMind-Ai github SaaS platform",
-    description:"RepoMind is an AI tool that summarizes your GitHub repos, tracks commits, answers code questions, and generates meeting issues for your projects",
-    link:"https://repomind.anujpatel.tech",
-    source:"https://github.com/anujbijoria2020/RepoMind",
-    techStack:['Nextjs',"shadcn",'trpc','tailwindcss','prisma','octokit','Gemini AI','vector embeddings','razorpay'],
+    logo:"/archflow.png",
+    title:"ArchFlow",
+    description:"An intelligent AI-powered SDE tool that generates Software Requirement Specifications (SRS), optimized SQL queries, and visual Mermaid diagrams from natural language using Google Gemini AI.",
+    link:"https://arcflowapp.netlify.app/",
+    source:"https://github.com/Ankitprajapati24/SysDesign-AI",
+    techStack:['React.js','FastAPI','Python','Gemini AI','Mermaid.js','Pydantic'],
 },
 {
   logo:"/ideanode.jpg",
