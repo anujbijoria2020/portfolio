@@ -5,15 +5,15 @@ import ProjectCard from './ProjectCard';
 import Title from '@/components/ui/Title';
 import { useState } from 'react';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
-import { Badge } from '@radix-ui/themes';
 import { bricolage_grotesque } from '@/utils/fonts';
 
+const INITIAL_PROJECTS = 4;
 
 const ProjectCardList = () => {
-  const [visibleProjects, setVisibleProjects] = useState(6);
+  const [visibleProjects, setVisibleProjects] = useState(INITIAL_PROJECTS);
 
   const loadMoreProjects = () => {
-    setVisibleProjects((prev) => prev + 6);
+    setVisibleProjects((prev) => prev + 4);
   };
 
   return (
@@ -34,12 +34,14 @@ const ProjectCardList = () => {
         ))}
       </div>
       {visibleProjects < data.length && (
-        <Badge color="gray" variant="solid" highContrast onClick={loadMoreProjects} className={`text-xs max-sm:text-[10px] flex items-center text-center dark:hover:bg-gray-300 py-1 px-2 hover:bg-gray-800 mt-6 ${bricolage_grotesque}`}>
+        <button
+          type="button"
+          onClick={loadMoreProjects}
+          className={`flex items-center justify-center gap-1 px-2.5 py-1 text-[11px] sm:text-xs font-medium rounded bg-black text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition-all duration-200 mt-6 cursor-pointer shadow-sm active:scale-95 ${bricolage_grotesque}`}
+        >
           <span>Load More</span>
-          <span className='!ml-[-3px] mt-[1px]'>
-            <ChevronDownIcon className='h-3 w-3 dark:!text-black !text-white  shrink-0  transition-transform duration-200' />
-          </span>
-        </Badge>
+          <ChevronDownIcon className='h-3 w-3 shrink-0 transition-transform duration-200' />
+        </button>
       )}
     </div>
   )
@@ -47,37 +49,92 @@ const ProjectCardList = () => {
 
 export default ProjectCardList;
 
-
-const data:Project[] = [
-{
-  logo:"/ScorePulse.svg",
-  title:"ScorePulse",
-  description:"ScorePulse is a real-time sports score tracking app built with React and Pure Web sockets It provides live updates for various sports, allowing users to stay informed about their favorite teams and games without needing to refresh the page.",
-  techStack:["Reactjs","Tailwindcss","Websockets","Nodejs","Expressjs","postgresql","drizzle-orm"],
-  link:"https://scorepulse.anujpatel.tech",
-  source:"https://github.com/anujbijoria2020/ScorePulseFrontend"
-},
-{
-    logo:"/archflow.png",
-    title:"ArchFlow",
-    description:"An intelligent AI-powered SDE tool that generates Software Requirement Specifications (SRS), optimized SQL queries, and visual Mermaid diagrams from natural language using Google Gemini AI.",
-    link:"https://arcflowapp.netlify.app/",
-    source:"https://github.com/Ankitprajapati24/SysDesign-AI",
-    techStack:['React.js','FastAPI','Python','Gemini AI','Mermaid.js','Pydantic'],
-},
-{
-  logo:"/ideanode.jpg",
-  title:"IdeaNode",
-  description:"Turn scattered thoughts into structured ideas — your second brain in the cloud.",
-  link:"https://ideanode.anujpatel.tech",
-  source:"https://github.com/anujbijoria2020/IdeaNode",
-  techStack:["Reactjs","Nodejs","Expressjs","Typescript","Mongodb","JWT-auth"]
-},{
-  logo:"/nextstepai.jpg",
-  title:"NextStep AI",
-  description:"NextStep AI is an AI-powered roadmap builder and productivity assistant.It allows users to generate personalized learning or career roadmaps using AI, view their recently generated roadmaps in a beautiful card-based UI, and sign in securely with Google OAuth",
-  techStack:["Reactjs","tailwindcss","Oauth","JWT","Nodejs","Expressjs","Passportjs","Nodemailer","Mongodb","deepseek Ai"],
-  link:"https://nextstepai.anujpatel.tech",
-  source:"https://github.com/anujbijoria2020/NextStep_AI",
-}
-]
+const data: Project[] = [
+  {
+    logo: "/ScorePulse.svg",
+    title: "ScorePulse",
+    description:
+      "ScorePulse is a real-time sports score tracking app built with React and Pure Web sockets It provides live updates for various sports, allowing users to stay informed about their favorite teams and games without needing to refresh the page.",
+    techStack: [
+      "Reactjs",
+      "Tailwindcss",
+      "Websockets",
+      "Nodejs",
+      "Expressjs",
+      "postgresql",
+      "drizzle-orm",
+    ],
+    link: "https://scorepulse.anujpatel.tech",
+    source: "https://github.com/anujbijoria2020/ScorePulseFrontend",
+  },
+  {
+    logo: "/archflow.png",
+    title: "ArchFlow",
+    description:
+      "An intelligent AI-powered SDE tool that generates Software Requirement Specifications (SRS), optimized SQL queries, and visual Mermaid diagrams from natural language using Google Gemini AI.",
+    link: "https://arcflowapp.netlify.app/",
+    source: "https://github.com/Ankitprajapati24/SysDesign-AI",
+    techStack: [
+      "React.js",
+      "FastAPI",
+      "Python",
+      "Gemini AI",
+      "Mermaid.js",
+      "Pydantic",
+    ],
+  },
+  {
+    logo: "/ideanode.jpg",
+    title: "IdeaNode",
+    description:
+      "Turn scattered thoughts into structured ideas — your second brain in the cloud.",
+    link: "https://ideanode.anujpatel.tech",
+    source: "https://github.com/anujbijoria2020/IdeaNode",
+    techStack: [
+      "Reactjs",
+      "Nodejs",
+      "Expressjs",
+      "Typescript",
+      "Mongodb",
+      "JWT-auth",
+    ],
+  },
+  {
+    logo: "/nextstepai.jpg",
+    title: "NextStep AI",
+    description:
+      "NextStep AI is an AI-powered roadmap builder and productivity assistant.It allows users to generate personalized learning or career roadmaps using AI, view their recently generated roadmaps in a beautiful card-based UI, and sign in securely with Google OAuth",
+    techStack: [
+      "Reactjs",
+      "tailwindcss",
+      "Oauth",
+      "JWT",
+      "Nodejs",
+      "Expressjs",
+      "Passportjs",
+      "Nodemailer",
+      "Mongodb",
+      "deepseek Ai",
+    ],
+    link: "https://nextstepai.anujpatel.tech",
+    source: "https://github.com/anujbijoria2020/NextStep_AI",
+  },
+  {
+    logo: "/schemaforge_logo.png",
+    title: "SchemaForge",
+    description:
+      "A visual SaaS platform for designing, validating, and generating database schemas. Build relational schemas, export production-ready migrations, and manage data configurations with a modern drag-and-drop workspace.",
+    techStack: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Flow",
+      "Node.js",
+      "Express.js",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    link: "https://schema-forge-frontend.vercel.app/",
+    source: "https://github.com/anujbijoria2020/SchemaForge",
+  },
+];
